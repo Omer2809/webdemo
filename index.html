@@ -1,7 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ff894e8fb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <title>Education</title>
+  </head>
   <body>
-    <h1>hello</h1>
-    <script src="./index.js"></script>
+    <header id="main-header">
+      <nav id="navbar" class="navbar top">
+        <h1 class="title">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Education</span
+          >Life
+        </h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Casess</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="showcase">
+        <h1>Education is the key</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
+          optio?
+        </p>
+        <a href="#" class="btn-primary btn">Read More</a>
+      </section>
+    </header>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+        perspiciatis animi laboriosam ex, totam praesentium consequatur nam
+        exercitationem magni molestias, dolore illum modi ad cupiditate quia
+        quibusdam, architecto possimus! Ab incidunt nam nostrum? Ad provident
+        non autem labore neque repellat pariatur. Numquam magnam, nesciunt
+        explicabo recusandae pariatur sunt adipisci rem impedit laudantium quia
+        porro consectetur quae reiciendis, nemo nam odio maxime iste enim
+        reprehenderit incidunt veritatis beatae quisquam nobis. Blanditiis
+        neque, quasi culpa suscipit temporibus, eveniet alias ipsa fugit
+        assumenda quisquam natus mollitia molestias possimus recusandae dolorem
+        aliquam nostrum enim autem inventore quae, saepe corporis itaque
+        voluptas numquam? Officia tempore beatae, aliquam aspernatur earum vitae
+        molestiae. Obcaecati doloribus officia aspernatur id est aut voluptatem
+        suscipit architecto magni, blanditiis inventore ipsa iure deserunt et
+        vero commodi, eius saepe exercitationem harum, ut quam nihil quae odit
+        illo? Rem quaerat accusantium magni ab id ipsam suscipit nihil optio
+        repudiandae, ullam quibusdam inventore adipisci sit repellat quos quasi
+        est pariatur tempore laboriosam molestiae natus, laudantium ea
+        architecto officia? Autem deleniti eum dicta quo odio voluptate ratione
+        reiciendis explicabo deserunt asperiores aut soluta nostrum ipsum
+        laborum architecto non molestiae, cupiditate aliquid harum esse ea
+        tempore tempora voluptas. Fugit exercitationem voluptate quaerat vero
+        dolorem repudiandae aliquid!
+      </p>
+    </section>
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+      window.onscroll = () => {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(() => {
+           navbar.style.transform = "translateY(0px)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled=false;
+        }
+      };
+    </script>
   </body>
 </html>
